@@ -57,13 +57,20 @@ function lakukanLooping(arrPegawai) {
   jumlahWanita = 0;
 
   for (let i = 0; i < dataYangAkanDilooping.length; i++) {
-    let hasil = "";
-    hasil += dataYangAkanDilooping.namaDepan[i] + " " + dataYangAkanDilooping[i].namaBelakang;
-    hasilLooping.push(hasil);
-    if (dataYangAkanDilooping[i].jenisKelamin === "M") {
-      jumlahPria += 1;
-    } else if (dataYangAkanDilooping[i].jenisKelamin === "P") {
-      jumlahWanita += 1;
+    for (let i = 0; i < dataYangAkanDilooping.length; i++) {
+      hasilLooping[i] = dataYangAkanDilooping[i].namaDepan + " " + dataYangAkanDilooping[i].namaBelakang;
+    }
+  }
+
+  for (let i = 0; i < dataYangAkanDilooping.length; i++) {
+    if (dataYangAkanDilooping[i].jenisKelamin == "M") {
+      arr1.push(dataYangAkanDilooping[i]);
+    }
+  }
+
+  for (let i = 0; i < dataYangAkanDilooping.length; i++) {
+    if (dataYangAkanDilooping[i].jenisKelamin == "F") {
+      arr2.push(dataYangAkanDilooping[i]);
     }
   }
 
